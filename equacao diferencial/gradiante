@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definindo a função
+def funcao(x):
+    return x**2 + 2*x - 1
+
+# Definindo o gradiente da função
+def gradiente(x):
+    return 2*x + 2
+
+# Intervalo de valores para o eixo x
+x = np.linspace(-5, 5, 100)
+
+# Calculando os valores da função e do gradiente para cada ponto
+y = funcao(x)
+dy = gradiente(x)
+
+# Plotando o gráfico da função e do gradiente
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label='Função')
+plt.plot(x, dy, label='Gradiente')
+plt.xlabel('x')
+plt.ylabel('y / dy')
+plt.title('Função e Gradiente')
+plt.legend()
+plt.grid(True)
+plt.show()
