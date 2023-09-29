@@ -20,13 +20,15 @@ def lagrange_interpolation(points, x, degree):
 # Exemplo de uso
 
 # Pontos de amostra para a interpolação
-points = [(1, 3), (2, 8), (3, 19), (4, 42), (5, 87)]
+#points = [(1, 3), (2, 8), (3, 19), (4, 42), (5, 87)]
+points= [(119.99999999999999, 0.121), (239.99999999999997, 0.139), (359.99999999999994, 0.153), (479.99999999999994, 0.159), (600.0, 0.172), (719.9999999999999, 0.172), (840.0, 0.183), (959.9999999999999, 0.185)]
+
 
 # Valor de x para o qual a interpolação será calculada
-x = 2.5
+x = 0.150
 
 # Grau do polinômio de interpolação
-degree = 3
+degree = 5
 
 # Realizar a interpolação usando o método de Lagrange com o grau escolhido
 result, polinomio = lagrange_interpolation(points, x, degree)

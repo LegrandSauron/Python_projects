@@ -1,13 +1,13 @@
-import numpy
-from sympy import*
+import numpy as np
+from sympy import * 
 import matplotlib.pyplot as plt
 
-a = symbols('a')
-b = symbols('b')
-n = symbols('n')
-l = symbols("l")
-x = symbols('x')
+u , t = symbols("u,t")
 
-argumento_1= [a*cos((n*pi*x)/l)+b*sin((n*pi*x)/l)]
+init_printing(use_unicode=True)
+
+y = Function('y')
+dsolve(Eq(y(t).diff(t, t) - y(t), exp(t)), y(t))
+
 
 
